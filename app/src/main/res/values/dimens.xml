@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_height_list">52dp</dimen>
+    <dimen name="layout_weight_text">0.6</dimen>
+    <dimen name="layout_weight_value">0.2</dimen>
+    <dimen name="layout_weight_unit">0.1</dimen>
+    <dimen name="layout_weight_sw">0.4</dimen>
+</resources>

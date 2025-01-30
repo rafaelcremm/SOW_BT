@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="insideOverlay"
+    tools:context=".TelaPrincipal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <!--POSITION-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="?android:attr/windowBackground"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Posição"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Posiçao de Retorno"
+                    android:textSize="16sp" />
+
+
+                <Button
+                    android:id="@+id/btMinusPosicaoRetorno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtPosicaoRetorno"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:text="100.00"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:text="mm"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btSumPosicaoRetorno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Posiçao Inicial"
+                    android:textSize="16sp" />
+                <Button
+                    android:id="@+id/btMinusPosicaoInicial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtPosicaoInicial"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:text="130.00" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="mm"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+                <Button
+                    android:id="@+id/btSumPosicaoInicial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Posiçao Final"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btMinusPosicaoFinal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/txtPosicaoFinal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:text="131.20" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="mm"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btSumPosicaoFinal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Profundidade"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btMinusProfundidade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtProfundidade"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:text="1.20" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="mm"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btSumProfundidade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--Time-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="?android:attr/windowBackground"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Tempos"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Tempo de Retorno"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btMinusTempoRetorno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtTempoRetorno"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:text="1.50" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="sec"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btSumTempoRetorno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Tempo de Descida"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btMinusTempoDescida"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtTempoDescida"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:text="1.00" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="sec"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btSumTempoDescida"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Tempo de Solda"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btMinusTempoSolda"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/txtTempoSolda"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:text="0.80" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="sec"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btSumTempoSolda"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Tempo de Espera"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btMinusTempoEspera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/txtTempoEspera"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="numberDecimal"
+                    android:imeOptions="actionDone"
+                    android:text="0.50" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="sec"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btSumTempoEspera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--SOLDA-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="?android:attr/windowBackground"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Solda"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Limite de Força -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Limite de Força"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btMinusLimiteForca"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-" />
+
+                <EditText
+                    android:id="@+id/txtLimiteForca"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:text="55" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="kgf"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btSumLimiteForca"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <!-- Limite de Energia -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Limite de Energia"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btMinusLimiteEnergia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-" />
+
+                <EditText
+                    android:id="@+id/txtLimiteEnergia"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:text="1200" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="J"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btSumLimiteEnergia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <!-- Amplitude Máxima -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Amplitude Máxima"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btMinusAmplitudeMaxima"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-" />
+
+                <EditText
+                    android:id="@+id/txtAmplitudeMaxima"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:text="90" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="%"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btSumAmplitudeMaxima"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <!-- Tempo para Amp Máx -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height_list"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_text"
+                    android:text="Tempo para Amp Máx"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btMinusTempoAmpMax"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="-" />
+
+                <EditText
+                    android:id="@+id/txtTempoAmpMax"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@dimen/layout_weight_value"
+                    android:ems="5"
+                    android:gravity="end"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:text="100" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@dimen/layout_weight_unit"
+                    android:text="ms"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btSumTempoAmpMax"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text="+" />
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+        <!--Configs-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="?android:attr/windowBackground"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Configuração"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:text="Controle de Amplitude:"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_interno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="Interno"
+                        android:textSize="16sp"
+                        android:checked="true" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_canal_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="Canal 1"
+                        android:textSize="16sp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switch_canal_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="Canal 2"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logocompleto" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
